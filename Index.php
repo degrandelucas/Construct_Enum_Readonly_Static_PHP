@@ -1,7 +1,8 @@
 <?php
 
+require 'Class/Marcas.php'; //import the enum first
 require 'Class/Carros.php';
 
-$carro = new Carros ('Fiat', 'Arco', 'Vermelho', 2020);
+$carro = new Carros (Marcas::Hyundai, 'HB20', 'Vermelho', 2020);
 
-echo $carro->getMarca();
+echo $carro->getMarca()->name; //output: Hyundai

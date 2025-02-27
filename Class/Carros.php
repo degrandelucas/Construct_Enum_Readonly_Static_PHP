@@ -2,12 +2,12 @@
 
 class Carros
 {
-    private String $marca;
+    private Marcas $marca;
     private String $modelo;
     private String $cor;
     private int $ano;
 
-    public function __construct($marca, $modelo, $cor, $ano)
+    public function __construct($marca, $modelo, $cor, $ano) //use the constructor
     {
         $this->marca = $marca;
         $this->modelo = $modelo;
@@ -15,9 +15,9 @@ class Carros
         $this->ano = $ano;
     }
 
-    public function getMarca() //getter
+    public function getMarca(): Marcas //getter
     {
-        return $this->marca; //returning the value of the attribute
+        return $this->marca;
     }
 
 }
