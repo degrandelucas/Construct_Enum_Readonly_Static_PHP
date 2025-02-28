@@ -2,6 +2,7 @@
 
 require 'Class/Marcas.php'; //import the enum first
 require 'Class/Carros.php';
+require 'Class/Automoveis.php';
 
 if (Carros::verificarEspaco()) {
     echo "Ainda há espaço na garagem para " . Carros::espacoNaGaragem() . " carro(s)\n";

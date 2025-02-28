@@ -1,7 +1,8 @@
 <?php
 
-class Carros extends Automoveis
+class Automoveis
 {
+
     private int $ano;
     private static int $espacoGaragemCarros = 5;
     private static int $totalCarrosGaregem = 0;
@@ -11,7 +12,7 @@ class Carros extends Automoveis
         public readonly Marcas $marca,
         public readonly string $modelo,
         public readonly string $cor,
-        $ano
+                               $ano
     )
     {
         $this->ano = $ano;
@@ -28,9 +29,9 @@ class Carros extends Automoveis
         return self::$espacoGaragemCarros - self::$totalCarrosGaregem;
     }
 
-/*    public function getMarca(): Marcas //getter
-    {
-        return $this->marca;
-    }*/
+    /*    public function getMarca(): Marcas //getter
+        {
+            return $this->marca;
+        }*/
 
 }
