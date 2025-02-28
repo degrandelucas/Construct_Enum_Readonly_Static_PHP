@@ -1,8 +1,8 @@
 <?php
 
 require 'Class/Marcas.php'; //import the enum first
+require 'Models/Automoveis.php';
 require 'Class/Carros.php';
-require 'Class/Automoveis.php';
 
 if (Carros::verificarEspaco()) {
     echo "Ainda há espaço na garagem para " . Carros::espacoNaGaragem() . " carro(s)\n";
@@ -13,6 +13,6 @@ if (Carros::verificarEspaco()) {
 }
 
 echo $carro1->marca->name;//output: Hyundai
-echo "\nNumero da marca na garagem".$carro1->marca->value; // Saída: 4
+echo "\nNumero da marca na garagem ".$carro1->marca->value; // Saída: 4
 
 echo "\n".$carro1->marca->getNomeCompleto(); //output: Hyundai Automóveis

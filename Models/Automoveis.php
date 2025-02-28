@@ -2,7 +2,6 @@
 
 class Automoveis
 {
-
     private int $ano;
     private static int $espacoGaragemCarros = 5;
     private static int $totalCarrosGaregem = 0;
