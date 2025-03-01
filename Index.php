@@ -14,7 +14,7 @@ if (Carros::verificarEspaco()) {
 }
 
 echo $carro1->marca->name;//output: Hyundai
-echo "\nNumero da marca na garagem ".$carro1->marca->value; // Saída: 4
+echo "\nNumero da marca na garagem \n".$carro1->marca->value; // Saída: 4
 
 echo "\n".$carro1->marca->getNomeCompleto(); //output: Hyundai Automóveis
 
@@ -27,6 +27,6 @@ if (Motos::verificarEspaco()) {
 }
 
 echo $moto1->marca->name;//output: Honda
-echo "\nNumero da moto na garagem ".$moto1->marca->value; // Saída: 5
+echo "\nNumero da moto na garagem \n".$moto1->marca->value; // Saída: 5
 
 echo "\n".$moto1->marca->getNomeCompleto(); //output: Honda Motos
