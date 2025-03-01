@@ -1,22 +1,22 @@
-# Projeto - Gerenciamento de Garagem de Carros
+# Projeto - Gerenciamento de Garagem de Veículos
 
-Este projeto é uma aplicação simples de gerenciamento de garagem de carros, desenvolvida em **PHP**. Ele permite adicionar carros à garagem, verificar o espaço disponível e exibir informações sobre os carros.
+Este projeto é uma aplicação simples de gerenciamento de garagem de veículos, desenvolvida em **PHP**. Ele permite adicionar carros e motos à garagem, verificar o espaço disponível e exibir informações sobre os veículos.
 
 ---
 
 ## Funcionalidades Principais
 
-1.  **Adicionar Carro:**
-    * Verifica se há espaço disponível na garagem antes de adicionar um novo carro.
-    * Exibe uma mensagem informando se o carro foi adicionado ou se a garagem está cheia.
+1.  **Adicionar Veículo:**
+    * Verifica se há espaço disponível na garagem antes de adicionar um novo veículo (carro ou moto).
+    * Exibe uma mensagem informando se o veículo foi adicionado ou se a garagem está cheia.
 
 2.  **Verificar Espaço:**
     * Exibe o número de vagas disponíveis na garagem.
 
-3.  **Exibir Informações do Carro:**
-    * Exibe o nome da marca do carro.
-    * Exibe o número associado à marca do carro.
-    * Exibe o nome completo da marca do carro.
+3.  **Exibir Informações do Veículo:**
+    * Exibe o nome da marca do veículo.
+    * Exibe o número associado à marca do veículo.
+    * Exibe o nome completo da marca do veículo.
 
 ---
 
@@ -26,16 +26,22 @@ Este projeto é uma aplicação simples de gerenciamento de garagem de carros, d
 
 * **`Index.php`**
     * Ponto de entrada da aplicação.
-    * Importa os arquivos `Marcas.php` e `Carros.php`.
-    * Cria um novo carro e exibe informações sobre ele.
-    * Verifica o espaço disponível na garagem.
+    * Importa os arquivos `Marcas.php`, `Automoveis.php`, `Carros.php` e `Motos.php`.
+    * Cria um novo carro e uma nova moto, exibindo informações sobre eles.
+    * Verifica o espaço disponível na garagem antes de adicionar cada veículo.
+
+* **`Models/Automoveis.php`**
+    * Define a classe abstrata `Automoveis` com propriedades para marca, cor e ano.
+    * Implementa métodos estáticos para verificar o espaço disponível na garagem (`verificarEspaco`) e obter o espaço disponível (`espacoNaGaragem`).
 
 * **`Class/Carros.php`**
-    * Define a classe `Carros` com propriedades para marca, modelo, cor e ano.
-    * Implementa métodos para verificar o espaço disponível na garagem (`verificarEspaco`), obter o espaço disponível (`espacoNaGaragem`) e obter o número total de carros na garagem.
+    * Define a classe `Carros` que estende `Automoveis`, com uma propriedade adicional para o modelo do carro.
+
+* **`Class/Motos.php`**
+    * Define a classe `Motos` que estende `Automoveis`, com uma propriedade adicional para o estilo da moto.
 
 * **`Class/Marcas.php`**
-    * Define o enum `Marcas` com casos para Fiat, Ford, Chevrolet e Hyundai.
+    * Define o enum `Marcas` com casos para Fiat, Ford, Chevrolet, Hyundai e Honda.
     * Implementa um método para obter o nome completo da marca (`getNomeCompleto`).
 
 ---
@@ -44,9 +50,13 @@ Este projeto é uma aplicação simples de gerenciamento de garagem de carros, d
 
 1.  **Clone o repositório.**
 
-2.  **Certifique-se de ter o PHP instalado.**
+2.  **Certifique-se de ter o PHP instalado (versão 8.1 ou superior).**
 
-3.  **Abra o arquivo `Index.php` no seu navegador ou execute-o através da linha de comando com o interpretador PHP.**
+3.  **Execute o arquivo `Index.php` no terminal ou no navegador.**
+
+    ```bash
+    php Index.php
+    ```
 
 4.  **Visualize as informações exibidas no console ou no navegador.**
 

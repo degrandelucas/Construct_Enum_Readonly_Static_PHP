@@ -2,10 +2,17 @@
 
 class Carros extends Automoveis
 {
-
-/*    public function getMarca(): Marcas //getter
+    public function __construct(
+        Marcas $marca,
+        public readonly String $modelo,
+        string $cor,
+        $ano
+    )
     {
-        return $this->marca;
-    }*/
-
+        parent::__construct($marca, $cor, $ano);
+    }
+        /*    public function getMarca(): Marcas //getter
+            {
+                return $this->marca;
+            }*/
 }

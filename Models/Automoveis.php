@@ -3,29 +3,28 @@
 class Automoveis
 {
     private int $ano;
-    private static int $espacoGaragemCarros = 5;
-    private static int $totalCarrosGaregem = 0;
+    private static int $espacoGaragemVeiculos = 5;
+    private static int $totalVeiculosGaregem = 0;
 
     public function __construct(
         // Propriedade readonly, use in constructor and automatically create a parameter
         public readonly Marcas $marca,
-        public readonly string $modelo,
         public readonly string $cor,
                                $ano
     )
     {
         $this->ano = $ano;
-        self::$totalCarrosGaregem++; //increase the total of cars in the garage with constructor call
+        self::$totalVeiculosGaregem++; //increase the total of cars in the garage with constructor call
     }
 
     public static function verificarEspaco(): bool
     {
-        return self::$totalCarrosGaregem < self::$espacoGaragemCarros;
+        return self::$totalVeiculosGaregem < self::$espacoGaragemVeiculos;
     }
 
     public static function espacoNaGaragem(): int
     {
-        return self::$espacoGaragemCarros - self::$totalCarrosGaregem;
+        return self::$espacoGaragemVeiculos - self::$totalVeiculosGaregem;
     }
 
     /*    public function getMarca(): Marcas //getter

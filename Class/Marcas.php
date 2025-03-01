@@ -5,6 +5,7 @@ enum Marcas: int{
     case Ford = 2;
     case Chevrolet = 3;
     case Hyundai = 4;
+    case Honda = 5;
 
     public function getNomeCompleto(): string
     {
@@ -13,6 +14,7 @@ enum Marcas: int{
             self::Ford => 'Ford Automóveis',
             self::Chevrolet => 'Chevrolet Automóveis',
             self::Hyundai => 'Hyundai Automóveis',
+            self::Honda => 'Honda Motos',
         };
     }
 }
