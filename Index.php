@@ -30,3 +30,16 @@ echo $moto1->marca->name;//output: Honda
 echo "\nNumero da moto na garagem \n".$moto1->marca->value; // Saída: 5
 
 echo "\n".$moto1->marca->getNomeCompleto(); //output: Honda Motos
+
+if (Carros::verificarEspaco()) {
+    echo "Ainda há espaço na garagem para " . Carros::espacoNaGaragem() . " veiculos(s)\n";
+    $carro2 = new Carros (Marcas::Fiat, 'Argo', 'Cinza', 2023);
+} else {
+    echo "Garagem cheia!\n";
+    return;
+}
+
+echo $carro2->marca->name;//output: Argo
+echo "\nNumero da marca na garagem \n".$carro2->marca->value; // Saída: 3
+
+echo "\n".$carro2->marca->getNomeCompleto(); //output: Fiat Automóveis
